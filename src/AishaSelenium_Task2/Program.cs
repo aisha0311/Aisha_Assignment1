@@ -38,21 +38,11 @@ namespace AishaSelenium_Task2
             EditTestCases edit = new EditTestCases(driver);
             edit.EditTimeAndMaterials();
 
-            //validate edit
-            val.ValidateTimeMaterial("112233", false, false);
-
-
             // delete test cases
             DeleteTestCases delete = new DeleteTestCases(driver);
             delete.DeleteTimeAndMaterials();
 
-            // delete test case
-            val.ValidateTimeMaterial("112233", false, true);
-
-            // validate delete test case
-            bool isfound = val.ValidateTimeMaterial("112233", false, false);
-
-            Console.Read();
+           Console.Read();
 
 
         }

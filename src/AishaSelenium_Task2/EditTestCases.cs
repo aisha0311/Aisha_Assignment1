@@ -39,6 +39,15 @@ namespace AishaSelenium_Task2
             IWebElement editSave = driver.FindElement(By.XPath("//input[contains(@id,'SaveButton')]"));
             editSave.Click();
 
+            Thread.Sleep(2000);
+
+            //validate edit
+            Validations val = new Validations(driver);
+
+            bool isFound = val.ValidateTimeMaterial("112233", false, false);
+
+            Assert.AreEqual(true, isFound);
+
         }
     }
 }
